@@ -43,26 +43,21 @@ public class MyString {
             return false;
             } 
 
-        String newstr1 = lowerCase(str1);
-        String newstr2 = lowerCase(str2);
-        int length1 = newstr1.length();
-        int length2 = newstr2.length();
-
         
-        if (length1 < length2){
+        if ( str1.length() < str2.length() ){
                 return false;
             }
 
            
 
-        for(int i = 0; i <= (length1 - length2); i++){
+        for(int i = 0; i <= (str1.length() - str2.length()); i++){
             int j = 0;
-            for (j = 0; j < length2; j++){
-                if (newstr1.charAt(i+j) != newstr2.charAt(j)){
+            for (j = 0; j < str2.length(); j++){
+                if (str1.charAt(i+j) != str2.charAt(j)){
                 break;
                 }
             }
-            if(j == length2){
+            if(j == str2.length()){
               return true;
             }
         }
