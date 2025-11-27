@@ -36,23 +36,16 @@ public class MyString {
 
     /** If str1 contains str2, returns true; otherwise returns false. */
     public static boolean contains(String str1, String str2) {
-        
-        if (str1 == null || str2 == null) return false;
 
-        if (str2.length() == 0){
-            return false;
-            } 
-
-        
         if ( str1.length() < str2.length() ){
                 return false;
             }
 
-           
-
         for(int i = 0; i <= (str1.length() - str2.length()); i++){
+
             int j = 0;
-            for (j = 0; j < str2.length(); j++){
+
+            for ( j = 0; j < str2.length(); j++){
                 if (str1.charAt(i+j) != str2.charAt(j)){
                 break;
                 }
