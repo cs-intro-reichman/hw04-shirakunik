@@ -146,7 +146,7 @@ public class ArrCharOps {
          return sum;
         }
          
-
+    
     /**
      * Compares the two strings lexicographically.
      * Assume that both strings are not empty.
@@ -174,14 +174,14 @@ public class ArrCharOps {
      */
     public static int compareTo(String str1, String str2) {
 
-        if (str1 == null) return -2;
-        if (str2 == null) return -2;
+        if (str1 == null || str2 == null) return -2;
+       
 
         if (str1.length() == 0 && str2.length() == 0) return 0;
         if (str1.length() == 0) return -1;
         if (str2.length() == 0) return 1;
 
-        for (int i=0; i<str1.length(); i++){
+        for (int i=0; i<str1.length() && i<str2.length(); i++){
 
             
             if (str1.charAt(i) < str2.charAt(i)){
@@ -207,5 +207,5 @@ public class ArrCharOps {
            
          return 0;
 }
-        }
     
+}
