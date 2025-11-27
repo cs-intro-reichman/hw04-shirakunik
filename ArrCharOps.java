@@ -141,8 +141,7 @@ public class ArrCharOps {
         for (int i=0; i<n; i++){
           
          long hash = (arr [i]) * (long)(Math.pow(7,n-1-i)); 
-         long term = (long)arr[i] * hash;
-         sum = sum + term;
+         sum = sum + hash;
         }
          return sum;
         }
