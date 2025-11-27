@@ -115,6 +115,11 @@ public class ArrCharOps {
      *  characters containing the characters "urge".
      */     
     public static char[] subArray(char[] arr, int beginIndex, int endIndex) {
+        
+        if (beginIndex < 0 || endIndex > arr.length || beginIndex > endIndex) {
+        return new char[0];
+        }
+        
         // new array
         char [] arr1 = new char [ endIndex - beginIndex ];
         int j = 0;
@@ -138,9 +143,15 @@ public class ArrCharOps {
     public static long hashCode(char[] arr) {
         int n = arr.length;
         long sum = 0;
+
         for (int i=0; i<n; i++){
+
+            long temp =1;
+            for (int j=0; j< (n-1-i); j++){
+                temp = temp * 7;
+            }
           
-         long hash = (arr [i]) * (long)(Math.pow(7,n-1-i)); 
+         long hash = (arr [i]) * temp;
          sum = sum + hash;
         }
          return sum;
