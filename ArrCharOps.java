@@ -141,12 +141,13 @@ public class ArrCharOps {
         for (int i=0; i<n; i++){
           
          long hash = (arr [i]) * (long)(Math.pow(7,n-1-i)); 
-         sum = sum + hash;
+         long term = (long)arr[i] * hash;
+         sum = sum + term;
         }
          return sum;
         }
          
-    
+
     /**
      * Compares the two strings lexicographically.
      * Assume that both strings are not empty.
@@ -188,7 +189,7 @@ public class ArrCharOps {
              }
             }
 
-            
+
             if (str1.length() < str2.length()){
             return -1;
              } 

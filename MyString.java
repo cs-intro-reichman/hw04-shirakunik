@@ -39,15 +39,16 @@ public class MyString {
         
         if (str1 == null || str2 == null) return false;
 
+        if (str2.length() == 0){
+            return false;
+            } 
+
         String newstr1 = lowerCase(str1);
         String newstr2 = lowerCase(str2);
         int length1 = newstr1.length();
         int length2 = newstr2.length();
 
-        if (str2.length() == 0){
-            return true;
-            } 
-
+        
         if (length1 < length2){
                 return false;
             }
