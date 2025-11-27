@@ -179,7 +179,6 @@ public class ArrCharOps {
 
         for (int i=0; i<str1.length(); i++){
 
-          if (i >= str2.length()) return 1;
             
             if (str1.charAt(i) < str2.charAt(i)){
             return -1; 
