@@ -177,10 +177,6 @@ public class ArrCharOps {
         if (str1 == null || str2 == null) return -2;
        
 
-        if (str1.length() == 0 && str2.length() == 0) return 0;
-        if (str1.length() == 0) return -1;
-        if (str2.length() == 0) return 1;
-
         for (int i=0; i<str1.length() && i<str2.length(); i++){
 
             

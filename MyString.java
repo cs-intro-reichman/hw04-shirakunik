@@ -38,15 +38,21 @@ public class MyString {
     public static boolean contains(String str1, String str2) {
         
         if (str1 == null || str2 == null) return false;
-        
+
         String newstr1 = lowerCase(str1);
         String newstr2 = lowerCase(str2);
         int length1 = newstr1.length();
         int length2 = newstr2.length();
 
-            if (length1 < length2){
+        if (str2.length() == 0){
+            return true;
+            } 
+
+        if (length1 < length2){
                 return false;
             }
+
+           
 
         for(int i = 0; i <= (length1 - length2); i++){
             int j = 0;
