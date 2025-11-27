@@ -186,22 +186,17 @@ public class ArrCharOps {
             if (str1.charAt(i) > str2.charAt(i)){
             return 1; 
              }
-              if (str1.charAt(i) == str2.charAt(i)){    
-                continue;
             }
 
-         }
+            
             if (str1.length() < str2.length()){
             return -1;
-            }
+             } 
             if (str1.length() > str2.length()){
             return 1;
             }
-            if (str1.length() == str2.length()){
-            return 0;
-            }
-           
+         
          return 0;
+ 
 }
-    
 }
